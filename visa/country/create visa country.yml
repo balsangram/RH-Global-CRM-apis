@@ -1,0 +1,37 @@
+info:
+  name: create visa country
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/visa/countries/"
+  body:
+    type: multipart-form
+    data:
+      - name: countryName
+        type: text
+        value: india
+      - name: countryCode
+        type: text
+        value: In
+      - name: flagEmoji
+        type: text
+        value: 🇨🇦
+      - name: image
+        type: file
+        value:
+          - /home/lucky/Downloads/insia.webp
+        contentType: image/webp
+        disabled: true
+      - name: description
+        type: text
+        value: Study, visit, and work permits for Canada
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

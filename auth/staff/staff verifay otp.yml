@@ -1,0 +1,24 @@
+info:
+  name: staff verifay otp
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/auth/staff/verify-otp"
+  body:
+    type: json
+    data: |-
+      {
+        "id": "6acf5fd1521ad1409819bc9c",
+        "email": "superadmin@gmail.com",
+        "otp": "123456"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

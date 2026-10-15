@@ -1,0 +1,47 @@
+info:
+  name: create visa country copy
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseUrl}}/visa/countries/bulk"
+  body:
+    type: multipart-form
+    data:
+      - name: countries[0][countryName]
+        type: text
+        value: iran
+      - name: countries[0][countryCode]
+        type: text
+        value: Ir
+      - name: countries[0][flagEmoji]
+        type: text
+        value: 🇨🇦
+      - name: image
+        type: file
+        value:
+          - /home/lucky/Downloads/insia.webp
+        contentType: image/webp
+        disabled: true
+      - name: description
+        type: text
+        value: Study, visit, and work permits for Canada
+        disabled: true
+      - name: countries[1][countryName]
+        type: text
+        value: pk
+      - name: countries[1][countryCode]
+        type: text
+        value: PK
+      - name: countries[1][flagEmoji]
+        type: text
+        value: 🇦🇺
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

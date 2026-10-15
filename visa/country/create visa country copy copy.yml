@@ -1,0 +1,16 @@
+info:
+  name: create visa country copy copy
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/visa/countries/6ad097908814ef7404eab0cb"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
