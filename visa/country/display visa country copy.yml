@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/visa/countries/"
+  url: "{{baseUrl}}/visa/countries/6ad099d88814ef7404eab0cc"
   auth: inherit
 
 settings:

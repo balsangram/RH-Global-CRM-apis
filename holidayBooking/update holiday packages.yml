@@ -1,0 +1,138 @@
+info:
+  name: update holiday packages
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday"
+  body:
+    type: multipart-form
+    data:
+      - name: packageName
+        type: text
+        value: Bali Wonders with Return Flights
+      - name: destination
+        type: text
+        value: Bali
+      - name: countryOrRegion
+        type: text
+        value: Indonesia
+      - name: duration
+        type: text
+        value: 5 Days / 4 Nights
+      - name: tourType
+        type: text
+        value: Customized Tour
+      - name: groupSize
+        type: text
+        value: 2 - 10 Pax
+      - name: packagePrice
+        type: text
+        value: "48500"
+      - name: currency
+        type: text
+        value: INR
+      - name: coverImage
+        type: file
+        value:
+          - /home/lucky/Downloads/Golden Hour Skatepark Ollie.png
+        contentType: image/png
+      - name: images[0]
+        type: text
+        value: ""
+        disabled: true
+      - name: images[1]
+        type: text
+        value: ""
+        disabled: true
+      - name: tripOverview
+        type: text
+        value: Experience the best of Bali with private tours, luxury stays in Kuta, thrilling water sports, and sunset temple visits.
+      - name: knowBeforeYouGo[0]
+        type: text
+        value: Passport must be valid for at least 6 months from the date of arrival
+      - name: knowBeforeYouGo[1]
+        type: text
+        value: |-
+          Visa on Arrival (VoA) is payable directly at Denpasar Airport (approx. 500,000 IDR / $35 USD)",
+              "Electronic Customs Declaration (e-CD) must be filled online before departure
+      - name: flightDetails[0][flightNo]
+        type: text
+        value: 6E 1605
+      - name: flightDetails[0][travelDate]
+        type: text
+        value: 15 Nov 2026
+      - name: flightDetails[0][sector]
+        type: text
+        value: BLR - DPS
+      - name: flightDetails[0][departure]
+        type: text
+        value: BLR 10:30 AM
+      - name: flightDetails[0][arrival]
+        type: text
+        value: DPS 04:45 PM
+      - name: flightDetails[0][airline]
+        type: text
+        value: IndiGo
+      - name: flightDetails[0][baggage]
+        type: text
+        value: 20kg Check-in + 7kg Cabin
+      - name: hotelsUsed[0][location]
+        type: text
+        value: Kuta
+      - name: hotelsUsed[0][hotelName]
+        type: text
+        value: Grand Zuri / Similar
+      - name: hotelsUsed[0][roomType]
+        type: text
+        value: Deluxe Room with Breakfast
+      - name: hotelsUsed[0][starRating]
+        type: text
+        value: 4 Star
+      - name: hotelsUsed[0][nights]
+        type: text
+        value: 4 Nights
+      - name: highlights[0]
+        type: text
+        value: Sunset tour at iconic Tanah Lot Temple
+      - name: highlights[1]
+        type: text
+        value: Tanjung Benoa water sports (Banana Boat included)
+      - name: highlights[2]
+        type: text
+        value: Uluwatu Cliff Temple & Kecak Dance Show
+      - name: inclusionsAndExclusions[0][point]
+        type: text
+        value: Return Airfare From Ex Bangalore
+      - name: inclusionsAndExclusions[0][isIncluded]
+        type: text
+        value: "true"
+      - name: inclusionsAndExclusions[0][note]
+        type: text
+        value: Economy class direct/connecting flights
+      - name: detailedItinerary[0][day]
+        type: text
+        value: Day 1
+      - name: detailedItinerary[0][title]
+        type: text
+        value: Arrival in Bali & Transfer to Kuta Hotel
+      - name: detailedItinerary[0][points][0]
+        type: text
+        value: |-
+          Warm traditional welcome by our representative at Ngurah Rai International Airport (DPS)",
+                  "Private AC vehicle transfer to Grand Zuri Hotel, Kuta
+      - name: detailedItinerary[0][overnightMeal]
+        type: text
+        value: Dinner on own
+      - name: detailedItinerary[0][overnightStay]
+        type: text
+        value: Overnight at Grand Zuri Hotel, Kuta
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
