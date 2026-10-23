@@ -1,0 +1,7 @@
+info:
+  name: Staff manage
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

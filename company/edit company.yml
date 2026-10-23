@@ -1,0 +1,22 @@
+info:
+  name: edit company
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/company/"
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: RH Global 1
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,24 @@
+info:
+  name: edit profile
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/auth/staff/profile"
+  body:
+    type: multipart-form
+    data:
+      - name: profileImage
+        type: file
+        value:
+          - /home/lucky/Downloads/_ (10).jpeg
+        contentType: image/jpeg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
