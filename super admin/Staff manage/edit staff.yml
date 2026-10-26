@@ -5,7 +5,13 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}"
+  url: "{{baseUrl}}/roles-permissions/6adee3473887107efe35074b"
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: nemo
   auth: inherit
 
 settings:

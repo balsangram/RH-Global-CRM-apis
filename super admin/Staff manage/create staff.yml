@@ -6,6 +6,35 @@ info:
 http:
   method: POST
   url: "{{baseUrl}}/roles-permissions"
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: kiro
+      - name: email
+        type: text
+        value: kiro@gmail.com
+      - name: phone
+        type: text
+        value: "8888888888"
+      - name: profileImage
+        type: file
+        value:
+          - /home/lucky/Pictures/_ (10).jpeg
+        contentType: image/jpeg
+      - name: role
+        type: text
+        value: ""
+        disabled: true
+      - name: permissions
+        type: text
+        value: ""
+        disabled: true
+      - name: status
+        type: text
+        value: ""
+        disabled: true
   auth: inherit
 
 settings:
