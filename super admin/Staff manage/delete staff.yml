@@ -5,7 +5,7 @@ info:
 
 http:
   method: DELETE
-  url: "{{baseUrl}}"
+  url: "{{baseUrl}}/roles-permissions/6adee3473887107efe35074b"
   auth: inherit
 
 settings:

@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}"
+  url: "{{baseUrl}}/roles-permissions"
   auth: inherit
 
 settings:
