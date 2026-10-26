@@ -11,13 +11,14 @@ http:
     data:
       - name: countryName
         type: text
-        value: india
+        value: Nepal
       - name: countryCode
         type: text
-        value: In
+        value: Np
       - name: flagEmoji
         type: text
         value: 🇨🇦
+        disabled: true
       - name: image
         type: file
         value:
