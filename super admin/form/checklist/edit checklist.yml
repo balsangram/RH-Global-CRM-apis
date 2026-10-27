@@ -1,0 +1,22 @@
+info:
+  name: edit checklist
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/form/checklist/6ae02b478404af4a972190e4"
+  body:
+    type: json
+    data: |-
+      {
+        "title":"Photograph"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

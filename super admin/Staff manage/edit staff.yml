@@ -5,7 +5,7 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/roles-permissions/6adee3473887107efe35074b"
+  url: "{{baseUrl}}/staff/6adee3473887107efe35074b"
   body:
     type: multipart-form
     data:

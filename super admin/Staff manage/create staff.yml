@@ -5,19 +5,19 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/roles-permissions"
+  url: "{{baseUrl}}/staff"
   body:
     type: multipart-form
     data:
       - name: name
         type: text
-        value: kiro
+        value: kiro1
       - name: email
         type: text
-        value: kiro@gmail.com
+        value: kiro1@gmail.com
       - name: phone
         type: text
-        value: "8888888888"
+        value: "8888888887"
       - name: profileImage
         type: file
         value:

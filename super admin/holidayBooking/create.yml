@@ -128,6 +128,9 @@ http:
       - name: detailedItinerary[0][overnightStay]
         type: text
         value: Overnight at Grand Zuri Hotel, Kuta
+      - name: countries[0]
+        type: text
+        value: india
   auth: inherit
 
 settings:

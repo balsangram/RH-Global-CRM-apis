@@ -10,8 +10,8 @@ http:
     type: json
     data: |-
       {
-        "id": "6acf5fd1521ad1409819bc9c",
-        "email": "superadmin@gmail.com",
+        "id": "6adf4874f023ade7cadfa558",
+        "email": "kiro1@gmail.com",
         "otp": "123456"
       }
   auth: inherit

@@ -1,0 +1,22 @@
+info:
+  name: delete checklist
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/form/checklist/6ae02b478404af4a972190e4"
+  body:
+    type: json
+    data: |-
+      {
+        "title":"Photograph"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
