@@ -8,18 +8,26 @@ http:
   url: "{{baseUrl}}/lead"
   body:
     type: json
-    data: |-
+    data: |
       {
-        "firstName":"ram",
-        "lastName":"bal",
-        "email":"ram@gmail.com",
-        "phone":"7992765867",
-        "type":"visa",
-        "travelToCountry":"",
-        "member":"1",
-        "message":"",
-        "timeToRevertBack":"",
-        "howCanWeAssist":""
+        "firstName": "Amit",
+        "lastName": "Verma",
+        "phone": "+919876543210",
+        "email": "amit.verma@acmecorp.com",
+        "companyName": "Acme Technologies Pvt Ltd",
+        "noOfEmployees": 120,
+        "spocPerson": "Amit Verma",
+        "designation": "HR Director",
+        "type": "holiday",
+        "travelType": "domestic",
+        "travelToCountry": "India",
+        "howManyPeople": 45,
+        "expectedBudget": "500000",
+        "message": "Looking for a 3-day corporate offsite retreat in Goa",
+        "timeToRevertBack": "24 Hours",
+      //   "timeToRevertBack": "48 Hours",
+      //   "timeToRevertBack": "72 Hours",
+        "howCanWeAssist": "Need full package with resort, conference hall, and catering"
       }
 
 settings:
