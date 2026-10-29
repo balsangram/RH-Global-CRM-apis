@@ -1,0 +1,64 @@
+info:
+  name: add visa master
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/visa-master"
+  body:
+    type: json
+    data: |
+      {
+        "caseType": "visa",
+        "applicantName": "Rahul Sharma",
+        "email": "rahul.sharma@example.com",
+        "phone": "+91 9876543210",
+        "passportNumber": "Z1234567",
+        "targetCountry": "United Kingdom",
+        "package": "671df422f08a901e1c27ab01",
+        "lead": "671df422f08a901e1c27ab02",
+        "assignedStaff": "671df422f08a901e1c27ab03",
+        "currentStage": 1,
+        "docsReceived": {
+          "generalChecklist": [
+            {
+              "checklist": "671df422f08a901e1c27ab04",
+              "title": "Passport / primary document",
+              "isReceived": true,
+              "isNotApplicable": false,
+              "remarks": "Original passport in hand"
+            },
+            {
+              "title": "Photograph",
+              "isReceived": true,
+              "isNotApplicable": false
+            },
+            {
+              "title": "Covering letter",
+              "isReceived": true,
+              "isNotApplicable": false
+            },
+            {
+              "title": "Accommodation booking",
+              "isReceived": false,
+              "isNotApplicable": true,
+              "remarks": "Staying with sponsor"
+            }
+          ],
+          "docsReceivedMode": "Courier",
+          "receivedDate": "2026-10-28T10:00:00Z",
+          "remarks": "Documents received in good condition"
+        },
+        "notes": "Fast-track processing requested by applicant"
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

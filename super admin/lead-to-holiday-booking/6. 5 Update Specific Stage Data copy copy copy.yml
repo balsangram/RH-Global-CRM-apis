@@ -1,0 +1,36 @@
+info:
+  name: 6. 5 Update Specific Stage Data copy copy copy
+  type: http
+  seq: 10
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6ae2dfb1464ad1bdbb435e3f/stage"
+  body:
+    type: json
+    data: |
+      {
+        "stage": 5,
+        "currentStage": 5,
+        "data": {
+          "actualStartDate": "2026-12-15",
+          "actualEndDate": "2026-12-22",
+          "currentLocation": "Seminyak & Ubud, Bali",
+          "tourStatus": "In Progress",
+          "travellerFeedback": "Airport pickup on time, villa check-in smooth",
+          "issueReported": false,
+          "issueDetails": "",
+          "emergencyContact": "+628123456789 (Local Bali Tour Manager)",
+          "remarks": "Guest enjoying the trip without issues"
+        }
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,33 @@
+info:
+  name: edit lead
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/lead/6ae1c4956bdd07c24109c254"
+  body:
+    type: json
+    data: |-
+      {
+      //   "firstName":"ram",
+      //   "lastName":"bal",
+      //   "email":"ram@gmail.com",
+      //   "phone":"7992765867",
+      //   "type":"visa",
+      //   "travelToCountry":"",
+        "member":"1",
+        "message":"i dont know",
+        "timeToRevertBack":"",
+        "howCanWeAssist":""
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

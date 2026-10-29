@@ -6,7 +6,9 @@ info:
 http:
   method: GET
   url: "{{baseUrl}}/auth/super-admin/profile"
-  auth: inherit
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZGYxMDFhNjY4OGE2YWYyYTYzMWRkOCIsImVtYWlsIjoic3VwZXJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiU1VQRVJfQURNSU4iLCJ1c2VyVHlwZSI6InN1cGVyX2FkbWluIiwiaWF0IjoxNzkzMDk5MzEwLCJleHAiOjE3OTMxODU3MTB9.sX3aYTRI0rxbHEDJLFgxJ1pTFPrw2zTA-i63HzFcHRI
 
 settings:
   encodeUrl: true

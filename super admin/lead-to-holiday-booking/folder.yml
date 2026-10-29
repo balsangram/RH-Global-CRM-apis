@@ -1,0 +1,7 @@
+info:
+  name: lead-to-holiday-booking
+  type: folder
+  seq: 6
+
+request:
+  auth: inherit

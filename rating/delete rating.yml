@@ -1,0 +1,21 @@
+info:
+  name: delete rating
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/rating/6ae319de0ade5b20e16d225f"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

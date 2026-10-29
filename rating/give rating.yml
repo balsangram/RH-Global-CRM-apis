@@ -1,0 +1,25 @@
+info:
+  name: give rating
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/rating"
+  body:
+    type: json
+    data: |
+      {
+        "packageId": "6ae2d9db65114e9b29bb3eb8",
+        "formId": "6ae2dfb1464ad1bdbb435e3f",
+        "rating": 5,
+        "message": "Exceptional experience! Ubud private villa and tour arrangements were top notch."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

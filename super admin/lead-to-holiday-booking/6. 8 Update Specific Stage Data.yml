@@ -1,0 +1,31 @@
+info:
+  name: 6. 8 Update Specific Stage Data
+  type: http
+  seq: 13
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6ae2dfb1464ad1bdbb435e3f/stage"
+  body:
+    type: json
+    data: |
+      {
+        "stage": 8,
+        "currentStage": 8,
+        "status": "Rejected",
+        "data": {
+          "rejectionDate": "2026-11-03",
+          "rejectionReason": "Customer opted for domestic travel due to budget constraints",
+          "remarks": "Lead closed as rejected. Follow-up for next summer."
+        }
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

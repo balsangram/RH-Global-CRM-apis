@@ -6,7 +6,26 @@ info:
 http:
   method: GET
   url: "{{baseUrl}}/lead"
-  auth: inherit
+  params:
+    - name: type
+      value: visa
+      type: query
+      disabled: true
+    - name: type
+      value: holiday
+      type: query
+      disabled: true
+    - name: q
+      value: sang
+      type: query
+      disabled: true
+    - name: q
+      value: "637099"
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

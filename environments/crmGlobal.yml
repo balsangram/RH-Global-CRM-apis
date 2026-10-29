@@ -1,0 +1,17 @@
+name: crmGlobal
+variables:
+  - name: baseAuth
+    value: http://35.154.153.217
+    description: ""
+  - name: admintoken
+    value: ""
+    description: ""
+  - name: stafftoken
+    value: ""
+    description: ""
+  - name: companytoken
+    value: ""
+    description: ""
+  - name: userToken
+    value: ""
+    description: ""

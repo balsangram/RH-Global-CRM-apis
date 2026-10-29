@@ -1,0 +1,30 @@
+info:
+  name: create lead
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/lead"
+  body:
+    type: json
+    data: |-
+      {
+        "firstName":"ram",
+        "lastName":"bal",
+        "email":"ram@gmail.com",
+        "phone":"7992765867",
+        "type":"visa",
+        "travelToCountry":"",
+        "member":"1",
+        "message":"",
+        "timeToRevertBack":"",
+        "howCanWeAssist":""
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

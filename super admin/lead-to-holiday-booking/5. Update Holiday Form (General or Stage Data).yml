@@ -1,0 +1,33 @@
+info:
+  name: 5. Update Holiday Form (General or Stage Data)
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6ae2dfb1464ad1bdbb435e3f"
+  body:
+    type: json
+    data: |
+      {
+        "status": "Active",
+        "discussion": {
+          "discussionDate": "2026-11-01",
+          "travelDestination": "Zurich & Interlaken",
+          "numberOfDays": 10,
+          "numberOfNights": 9,
+          "hotelPreference": "4 Star",
+          "quotationAmount": 340000,
+          "customerApprovalStatus": "Approved"
+        }
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

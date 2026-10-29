@@ -1,0 +1,61 @@
+info:
+  name: 6. 4 Update Specific Stage Data copy copy
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6ae2dfb1464ad1bdbb435e3f/stage"
+  body:
+    type: json
+    data: |
+      {
+        "stage": 4,
+        "currentStage": 4,
+        "data": {
+          "passportDetails": {
+            "passportNumber": "Z9876543",
+            "passportExpiryDate": "2031-08-20"
+          },
+          "visaRequired": true,
+          "visaStatus": "Approved",
+          "travelInsurance": {
+            "required": true,
+            "provider": "Tata AIG",
+            "policyNumber": "POL-99887766",
+            "startDate": "2026-12-15",
+            "endDate": "2026-12-23"
+          },
+          "ticketsBooked": true,
+          "hotelBookingsConfirmed": true,
+          "vouchersPrepared": true,
+          "checklist": [
+            {
+              "item": "Passport copies verified",
+              "status": "Received",
+              "remarks": "Both adults and child"
+            },
+            {
+              "item": "Flight tickets booked",
+              "status": "Received",
+              "remarks": "IndiGo round-trip tickets issued"
+            },
+            {
+              "item": "Hotel vouchers issued",
+              "status": "Received",
+              "remarks": "Grand Zuri Kuta & Ubud Villa"
+            }
+          ],
+          "remarks": "All travel documents confirmed and ready"
+        }
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

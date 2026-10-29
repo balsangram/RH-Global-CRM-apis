@@ -1,0 +1,28 @@
+info:
+  name: "9. Stage 6: Additional / Ad-hoc Services"
+  type: http
+  seq: 16
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6ae2dfb1464ad1bdbb435e3f/additional-services"
+  body:
+    type: json
+    data: |
+      {
+        "serviceName": "Helicopter Tour over Alps",
+        "description": "Private 30-minute aerial tour",
+        "quantity": 1,
+        "amount": 45000,
+        "paymentStatus": "Paid"
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

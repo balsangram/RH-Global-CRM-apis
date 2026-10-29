@@ -39,13 +39,15 @@ http:
           - /home/lucky/Downloads/Golden Hour Skatepark Ollie.png
         contentType: image/png
       - name: images[0]
-        type: text
-        value: ""
-        disabled: true
+        type: file
+        value:
+          - /home/lucky/Pictures/_ (10).jpeg
+        contentType: image/jpeg
       - name: images[1]
-        type: text
-        value: ""
-        disabled: true
+        type: file
+        value:
+          - /home/lucky/Pictures/_ (10).jpeg
+        contentType: image/jpeg
       - name: tripOverview
         type: text
         value: Experience the best of Bali with private tours, luxury stays in Kuta, thrilling water sports, and sunset temple visits.

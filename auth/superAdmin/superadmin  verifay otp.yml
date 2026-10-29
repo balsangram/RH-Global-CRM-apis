@@ -10,7 +10,7 @@ http:
     type: json
     data: |-
       {
-        "id": "6acf5fd1521ad1409819bc9c",
+        "id": "6adf101a6688a6af2a631dd8",
         "email": "superadmin@gmail.com",
         "otp": "123456"
       }

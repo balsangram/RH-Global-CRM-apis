@@ -1,0 +1,44 @@
+info:
+  name: 6. 2 Update Specific Stage Data copy
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6ae2dfb1464ad1bdbb435e3f/stage"
+  body:
+    type: json
+    data: |
+      {
+        "stage": 2,
+        "currentStage": 2,
+        "data": {
+          "discussionDate": "2026-11-01",
+          "travelDestination": "Bali (Kuta & Ubud)",
+          "numberOfDays": 7,
+          "numberOfNights": 6,
+          "itinerary": "Day 1: Kuta Beach Check-in\nDay 2: Water Sports\nDay 3: Ubud Art & Culture\nDay 4: Mount Batur\nDay 5: Tanah Lot Sunset\nDay 6: Shopping & Leisure\nDay 7: Departure",
+          "hotelPreference": "4 Star / Private Pool Villa",
+          "transportPreference": "Private AC Vehicle with Guide",
+          "mealPreference": "Daily Breakfast + Vegetarian Dinners",
+          "activities": [
+            "Scuba Diving",
+            "Kintamani Volcano Tour",
+            "Benoa Beach Sports"
+          ],
+          "packageDetails": "Customized 6N/7D Bali Luxury Holiday",
+          "quotationAmount": 240000,
+          "customerApprovalStatus": "Approved",
+          "remarks": "Itinerary and quotation approved by traveler"
+        }
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,35 @@
+info:
+  name: 6. 7 Update Specific Stage Data copy copy copy copy copy
+  type: http
+  seq: 12
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6ae2dfb1464ad1bdbb435e3f/stage"
+  body:
+    type: json
+    data: |
+      {
+        "stage": 7,
+        "currentStage": 7,
+        "status": "Completed",
+        "data": {
+          "completionDate": "2026-12-23",
+          "finalStatus": "Completed",
+          "customerFeedback": "Exceptional experience! Well curated itinerary and 24/7 support.",
+          "rating": 5,
+          "refundAmount": 0,
+          "refundStatus": "Not Applicable",
+          "remarks": "Traveler safely returned. Review collected."
+        }
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

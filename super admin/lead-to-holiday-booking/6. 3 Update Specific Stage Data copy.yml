@@ -1,0 +1,42 @@
+info:
+  name: 6. 3 Update Specific Stage Data copy
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6ae2dfb1464ad1bdbb435e3f/stage"
+  body:
+    type: json
+    data: |
+      {
+        "stage": 3,
+        "currentStage": 3,
+        "data": {
+          "invoiceNumber": "INV-2026-RH001",
+          "invoiceDate": "2026-11-05",
+          "totalAmount": 240000,
+          "discountAmount": 10000,
+          "taxAmount": 11500,
+          "finalAmount": 241500,
+          "advanceAmount": 100000,
+          "paidAmount": 100000,
+          "pendingAmount": 141500,
+          "currency": "INR",
+          "paymentStatus": "Partially Paid",
+          "paymentMode": "Bank Transfer",
+          "transactionId": "TXN_BALI_998877",
+          "paymentDate": "2026-11-05",
+          "remarks": "Advance received; balance due 10 days before travel"
+        }
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

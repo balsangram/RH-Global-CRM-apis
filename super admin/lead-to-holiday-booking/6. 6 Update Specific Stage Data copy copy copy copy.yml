@@ -1,0 +1,36 @@
+info:
+  name: 6. 6 Update Specific Stage Data copy copy copy copy
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6ae2dfb1464ad1bdbb435e3f/stage"
+  body:
+    type: json
+    data: |
+      {
+        "stage": 6,
+        "currentStage": 6,
+        "data": [
+          {
+            "serviceName": "Beach Candlelight Dinner",
+            "description": "Jimbaran Beach Romantic Sunset Dinner with Seafood",
+            "serviceDate": "2026-12-18",
+            "quantity": 1,
+            "amount": 12000,
+            "paymentStatus": "Paid",
+            "remarks": "Special anniversary table decorated"
+          }
+        ]
+      }
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
