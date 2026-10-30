@@ -10,9 +10,9 @@ http:
     type: json
     data: |
       {
-        "customerName": "Rahul Sharma",
+        "customerName": "anshu Sharma",
         "email": "rahul.sharma@example.com",
-        "phone": "+919876543210",
+        "phone": "+919876543200",
         "alternatePhone": "+919876543211",
         "source": "Website",
         "destination": "Bali, Indonesia",

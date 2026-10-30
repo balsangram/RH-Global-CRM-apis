@@ -1,0 +1,7 @@
+info:
+  name: visa booking
+  type: folder
+  seq: 6
+
+request:
+  auth: inherit

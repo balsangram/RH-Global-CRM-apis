@@ -1,0 +1,28 @@
+info:
+  name: "edit visa form "
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/visa-master/6ae43a34b65146dd6c981f06"
+  body:
+    type: json
+    data: |
+      {
+        "applicantName": "Johnathon Doe",
+        "phone": "+91 9999988888",
+        "status": "Active",
+        "passportDetails": {
+          "passportNumber": "Z9876543",
+          "expiryDate": "2032-05-20"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,30 @@
+info:
+  name: edit visa form stage 4
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/visa-master/6ae43a34b65146dd6c981f06"
+  body:
+    type: json
+    data: |
+      {
+        "stage": 4,
+        "data": {
+          "submission": "VFS",
+          "submissionDate": "2026-11-05",
+          "vfsEmbassyReferenceNo": "GWF012345678",
+          "collectionMode": "Counter Collection",
+          "submissionLocation": "VFS Delhi",
+          "remarks": "Biometrics and application submitted successfully"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

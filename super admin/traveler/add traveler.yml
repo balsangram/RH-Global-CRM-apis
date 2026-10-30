@@ -1,0 +1,33 @@
+info:
+  name: add traveler
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/traveler"
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: san
+      - name: email
+        type: text
+        value: sa@gmail.com
+      - name: phone
+        type: text
+        value: "7877777777"
+      - name: profileImage
+        type: file
+        value:
+          - /home/lucky/Pictures/_ (10).jpeg
+        contentType: image/jpeg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

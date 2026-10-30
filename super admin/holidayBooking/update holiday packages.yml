@@ -5,7 +5,7 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/holiday"
+  url: "{{baseUrl}}/holiday/"
   body:
     type: multipart-form
     data:

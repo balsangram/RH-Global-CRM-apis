@@ -1,0 +1,29 @@
+info:
+  name: create visa form company
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/visa-master"
+  body:
+    type: json
+    data: |
+      {
+        "customerType": "company",
+        "companyId": "6ae078b0e6f62f4d647bcb88",
+        "applicantName": "Rajesh Kumar (ABC Tech Ltd)",
+        "email": "rajesh@abctech.com",
+        "phone": "+91 9876543210",
+        "packageName": "Schengen Business Visa",
+        "currentStage": 1,
+        "status": "Active"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

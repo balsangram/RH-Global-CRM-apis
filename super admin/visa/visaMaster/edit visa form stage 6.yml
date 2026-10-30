@@ -1,0 +1,36 @@
+info:
+  name: edit visa form stage 6
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/visa-master/6ae43a34b65146dd6c981f06"
+  body:
+    type: json
+    data: |
+      {
+        "stage": 6,
+        "data": {
+          "finalStatus": "Approved",
+          "completionDate": "2026-11-15",
+          "modeOfDispatch": "Courier",
+          "dispatchDate": "2026-11-16",
+          "trackingNumber": "DTDC987654321",
+          "dispatch": [
+            {
+              "title": "Passport with Stamped Visa",
+              "status": "Dispatched"
+            }
+          ],
+          "remarks": "Visa approved for 6 months. Passport dispatched."
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

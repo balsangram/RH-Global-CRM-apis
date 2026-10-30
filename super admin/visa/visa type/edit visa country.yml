@@ -5,24 +5,28 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/visa/6ad0bcff6960dd43c4e50a75"
+  url: "{{baseUrl}}/visa/6ae2c9c95464a6a1991ab919"
   body:
     type: multipart-form
     data:
       - name: country
         type: text
         value: 6ad099d88814ef7404eab0cc
+        disabled: true
       - name: packageName
         type: text
         value: Canada Student Direct Stream (SDS) Visa
+        disabled: true
       - name: visaType
         type: text
         value: Student Visa
+        disabled: true
       - name: image
         type: file
         value:
           - /home/lucky/Downloads/insia.webp
         contentType: image/webp
+        disabled: true
       - name: sideImages[0]
         type: text
         value: Study, visit, and work permits for Canada
@@ -34,135 +38,182 @@ http:
       - name: validityPeriod
         type: text
         value: Up to 3 Years
+        disabled: true
       - name: permittedStayDuration
         type: text
         value: Duration of study program
+        disabled: true
       - name: standardProcessingTime
         type: text
         value: 4 to 6 weeks
+        disabled: true
       - name: embassyStatus
         type: text
         value: Accepting Applications
+        disabled: true
       - name: estimatedCost
         type: text
         value: "15000"
+        disabled: true
       - name: costBreakdown[visaFee]
         type: text
         value: "9500"
+        disabled: true
       - name: costBreakdown[serviceFee]
         type: text
         value: "5500"
+        disabled: true
       - name: costBreakdown[currency]
         type: text
         value: INR
+        disabled: true
       - name: costBreakdown[note]
         type: text
         value: Includes biometrics and embassy processing charges
+        disabled: true
       - name: qualification[0]
         type: text
         value: 12th Standard / High School completion for Diploma/Bachelor programs
+        disabled: true
       - name: qualification[1]
         type: text
         value: Bachelor Degree with minimum 55% for Master/PG Diploma programs
+        disabled: true
       - name: education[0]
         type: text
         value: Official Letter of Acceptance (LOA) from a Canadian DLI Institution
+        disabled: true
       - name: education[1]
         type: text
         value: Academic marksheets, degree certificate, and transcripts
+        disabled: true
       - name: job[0]
         type: text
         value: Work experience letters and payslips (if any study gap)
+        disabled: true
       - name: job[1]
         type: text
         value: No work experience mandatory for fresh graduates
+        disabled: true
       - name: languageRequirement[0]
         type: text
         value: "IELTS Academic: minimum 6.0 overall (no band less than 5.5)"
+        disabled: true
       - name: languageRequirement[1]
         type: text
         value: "PTE Academic: minimum score of 60"
+        disabled: true
       - name: ageLimit
         type: text
         value: 18 - 35 years
+        disabled: true
       - name: financialRequirements
         type: text
         value: 1 Year tuition fee paid receipt + GIC Certificate of CAD 20,635
+        disabled: true
       - name: eligibilityCriteria[0]
         type: text
         value: Valid passport with at least 6 months validity
+        disabled: true
       - name: eligibilityCriteria[1]
         type: text
         value: Upfront medical examination by panel physician
+        disabled: true
       - name: eligibilityCriteria[2]
         type: text
         value: Clean criminal record (Police Clearance Certificate)
+        disabled: true
       - name: documentRequirements[0][documentName]
         type: text
         value: Valid Passport (Current & Previous)
+        disabled: true
       - name: documentRequirements[0][requirementType]
         type: text
         value: MANDATORY
+        disabled: true
       - name: documentRequirements[0][description]
         type: text
         value: Clear scan of photo and address pages in PDF format
+        disabled: true
       - name: documentRequirements[1][documentName]
         type: text
         value: GIC Certificate
+        disabled: true
       - name: documentRequirements[1][requirementType]
         type: text
         value: ALTERNATIVE
+        disabled: true
       - name: documentRequirements[1][groupName]
         type: text
         value: groupName
+        disabled: true
       - name: documentRequirements[1][description]
         type: text
         value: FD in student or sponsor's name
+        disabled: true
       - name: documentRequirements[2][documentName]
         type: text
         value: Statement of Purpose (SOP)
+        disabled: true
       - name: documentRequirements[2][requirementType]
         type: text
         value: OPTIONAL
+        disabled: true
       - name: documentRequirements[2][description]
         type: text
         value: Explanation of study goals and intent to return
+        disabled: true
       - name: documentGroupRules[0][groupName]
         type: text
         value: Financial Proof
+        disabled: true
       - name: documentGroupRules[0][minRequired]
         type: text
         value: "2"
+        disabled: true
       - name: documentGroupRules[0][documents][0]
         type: text
         value: GIC Certificate
+        disabled: true
       - name: documentGroupRules[0][documents][1]
         type: text
         value: Bank Statement (Last 6 Months)
+        disabled: true
       - name: documentGroupRules[0][ruleDescription]
         type: text
         value: Please submit any 2 of the 3 listed financial documents
+        disabled: true
       - name: stepByStepGuidance[0]
         type: text
         value: "Step 1: Get admission offer letter from a designated DLI institution"
+        disabled: true
       - name: stepByStepGuidance[1]
         type: text
         value: "Step 2: Pay 1st year tuition fee and purchase GIC certificate"
+        disabled: true
       - name: stepByStepGuidance[2]
         type: text
         value: "Step 3: Complete upfront medical examination"
+        disabled: true
       - name: stepByStepGuidance[3]
         type: text
         value: "Step 4: Prepare academic and financial documents"
+        disabled: true
       - name: stepByStepGuidance[4]
         type: text
         value: "Step 5: Submit visa application online and schedule biometrics appointment"
+        disabled: true
       - name: faqs[0][question]
         type: text
         value: Can international students work while studying in Canada?
+        disabled: true
       - name: faqs[0][answer]
         type: text
         value: Yes, eligible students can work up to 20 hours per week off-campus during academic semesters and full-time during scheduled breaks.
+        disabled: true
+      - name: isActive
+        type: text
+        value: "false"
   auth: inherit
 
 settings:

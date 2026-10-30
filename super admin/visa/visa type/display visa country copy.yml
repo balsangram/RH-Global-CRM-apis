@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/visa/"
+  url: "{{baseUrl}}/visa/?isActive=false"
+  params:
+    - name: isActive
+      value: "false"
+      type: query
   auth: inherit
 
 settings:

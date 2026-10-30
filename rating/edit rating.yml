@@ -5,12 +5,12 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/rating/6ae308a7d1c1062281c42459"
+  url: "{{baseUrl}}/rating/6ae319de0ade5b20e16d225f"
   body:
     type: json
     data: |
       {
-        "rating": 4,
+        "rating": 2,
         "message": "Updated review feedback after discussion.",
         "status": "Approved"
       }

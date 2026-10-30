@@ -1,0 +1,36 @@
+info:
+  name: edit traveler
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/traveler/6ae44763f9114f20e2bf86b8"
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: san
+        disabled: true
+      - name: email
+        type: text
+        value: sa11@gmail.com
+      - name: phone
+        type: text
+        value: "7877777777"
+        disabled: true
+      - name: profileImage
+        type: file
+        value:
+          - /home/lucky/Pictures/_ (10).jpeg
+        contentType: image/jpeg
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

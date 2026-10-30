@@ -1,0 +1,28 @@
+info:
+  name: create visa form single
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/visa-master"
+  body:
+    type: json
+    data: |
+      
+      {
+        "customerType": "individual",
+        "applicantName": "John Doe",
+        "phone": "+91 9876543210",
+        "email": "john.doe@example.com",
+        "packageName": "UK Tourist Visa 6 Months",
+        "countryName": "United Kingdom"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

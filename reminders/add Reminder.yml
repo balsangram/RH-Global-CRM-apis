@@ -1,0 +1,27 @@
+info:
+  name: add Reminder
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/reminders"
+  body:
+    type: json
+    data: |
+      {
+        "date": "2026-10-29",
+        "message": "Call customer regarding Dubai visa photo submission",
+        "title": "Visa Photo Follow-up",
+        "priority": "High",
+        "status": "Pending",
+        "staffId": "66fa9d8324e9301138801234"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

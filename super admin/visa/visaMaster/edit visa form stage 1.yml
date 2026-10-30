@@ -1,0 +1,36 @@
+info:
+  name: edit visa form stage 1
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/visa-master/6ae43a34b65146dd6c981f06"
+  body:
+    type: json
+    data: |
+      {
+        "stage": 1,
+        "data": {
+          "docsReceivedMode": "Pickup",
+          "generalChecklist": [
+            {
+              "title": "Original Passport",
+              "status": "Received"
+            },
+            {
+              "title": "Bank Statements",
+              "status": "Received"
+            }
+          ],
+          "remarks": "All mandatory documents received"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -7,14 +7,31 @@ http:
   method: POST
   url: "{{baseUrl}}/rating"
   body:
-    type: json
-    data: |
-      {
-        "packageId": "6ae2d9db65114e9b29bb3eb8",
-        "formId": "6ae2dfb1464ad1bdbb435e3f",
-        "rating": 5,
-        "message": "Exceptional experience! Ubud private villa and tour arrangements were top notch."
-      }
+    type: multipart-form
+    data:
+      - name: image
+        type: file
+        value:
+          - /home/lucky/Pictures/_ (10).jpeg
+        contentType: image/jpeg
+      - name: packageId
+        type: text
+        value: 6ae2d9db65114e9b29bb3eb8
+      - name: rating
+        type: text
+        value: "1"
+      - name: message
+        type: text
+        value: nice
+      - name: customerName
+        type: text
+        value: sangram
+      - name: customerEmail
+        type: text
+        value: ss@gmail.com
+      - name: customerPhone
+        type: text
+        value: "8765432124"
   auth: inherit
 
 settings:

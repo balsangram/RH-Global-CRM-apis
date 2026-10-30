@@ -21,6 +21,15 @@ http:
             "amount": 12000,
             "paymentStatus": "Paid",
             "remarks": "Special anniversary table decorated"
+          },
+          {
+            "serviceName": "ATV Quad Bike & Rafting",
+            "description": "Ayung River Rafting + 2hr ATV Quad Bike ride in Ubud",
+            "serviceDate": "2026-12-19",
+            "quantity": 2,
+            "amount": 18000,
+            "paymentStatus": "Paid",
+            "remarks": "Transfers included"
           }
         ]
       }
