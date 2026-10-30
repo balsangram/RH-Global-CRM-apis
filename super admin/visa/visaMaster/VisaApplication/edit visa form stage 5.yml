@@ -1,5 +1,5 @@
 info:
-  name: "edit visa form "
+  name: edit visa form stage 5
   type: http
   seq: 5
 
@@ -10,12 +10,11 @@ http:
     type: json
     data: |
       {
-        "applicantName": "Johnathon Doe",
-        "phone": "+91 9999988888",
-        "status": "Active",
-        "passportDetails": {
-          "passportNumber": "Z9876543",
-          "expiryDate": "2032-05-20"
+        "stage": 5,
+        "data": {
+          "inProgressStatus": "In Progress",
+          "pendingRequestFromVfsEmbassy": "None. Application under embassy review.",
+          "remarks": "Processing normally at UK Visas and Immigration"
         }
       }
   auth: inherit

@@ -11,13 +11,13 @@ http:
     data:
       - name: name
         type: text
-        value: san
+        value: sangram bal
       - name: email
         type: text
-        value: sa@gmail.com
+        value: balsangram@gmail.com
       - name: phone
         type: text
-        value: "7877777777"
+        value: "6370404471"
       - name: profileImage
         type: file
         value:

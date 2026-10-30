@@ -1,0 +1,30 @@
+info:
+  name: "edit application "
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/application"
+  body:
+    type: json
+    data: |
+      {
+        "applicantName": "Priya Sharma",
+        "mobileNumber": "+919876543211",
+        "status": "in-review",
+        "passportDetails": {
+          "passportNumber": "Z1234567",
+          "issueDate": "2020-01-15",
+          "expiryDate": "2030-01-14",
+          "issuingCountry": "India"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,11 +1,14 @@
 info:
-  name: display visa form single
+  name: display singler
   type: http
-  seq: 4
+  seq: 6
 
 http:
   method: GET
-  url: "{{baseUrl}}/visa-master/6ae43a34b65146dd6c981f06"
+  url: "{{baseUrl}}/visa-master/6ae46c5eb32ae008f3c35c23"
+  body:
+    type: json
+    data: ""
   auth: inherit
 
 settings:

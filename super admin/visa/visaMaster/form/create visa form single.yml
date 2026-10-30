@@ -9,14 +9,14 @@ http:
   body:
     type: json
     data: |
-      
       {
-        "customerType": "individual",
-        "applicantName": "John Doe",
-        "phone": "+91 9876543210",
-        "email": "john.doe@example.com",
-        "packageName": "UK Tourist Visa 6 Months",
-        "countryName": "United Kingdom"
+        "packageId": "6ae182cd6bdd07c24109c20b",
+        "documents": [
+          "6ae46c3ab32ae008f3c35c22"
+        ],
+        "checklists": [
+          "6ae02d688404af4a972190e5"
+        ]
       }
   auth: inherit
 

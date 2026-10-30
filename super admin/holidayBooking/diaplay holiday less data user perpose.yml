@@ -1,11 +1,11 @@
 info:
-  name: display visa form company
+  name: diaplay holiday less data user perpose
   type: http
-  seq: 3
+  seq: 6
 
 http:
   method: GET
-  url: "{{baseUrl}}/visa-master"
+  url: "{{baseUrl}}/holiday/active/user"
   auth: inherit
 
 settings:

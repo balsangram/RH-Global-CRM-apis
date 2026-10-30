@@ -1,0 +1,40 @@
+info:
+  name: create application for individual
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{baseUrl}}/application"
+  body:
+    type: json
+    data: |
+      {
+        "customerType": "individual",
+        "packageId": "6ae182cd6bdd07c24109c20b",
+        "applicantName": "Rahul Sharma",
+        "email": "rahul@example.com",
+        "mobileNumber": "+919876543210",
+        "passportDetails": {
+          "passportNumber": "Z1234567",
+          "issueDate": "2020-01-15",
+          "expiryDate": "2030-01-14",
+          "issuingCountry": "India"
+        },
+        "travelers": [
+          {
+            "name": "Priya Sharma",
+            "email": "priya@example.com",
+            "phone": "+919876543211",
+            "passportDetails": { "passportNumber": "Z7654321" }
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,16 @@
+info:
+  name: based on package form
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{baseUrl}}/visa-master/package/6ae182cd6bdd07c24109c20b"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

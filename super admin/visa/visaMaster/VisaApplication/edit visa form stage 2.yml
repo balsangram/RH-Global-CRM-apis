@@ -1,7 +1,7 @@
 info:
   name: edit visa form stage 2
   type: http
-  seq: 7
+  seq: 2
 
 http:
   method: PATCH

@@ -1,7 +1,7 @@
 info:
-  name: edit visa form stage 5
+  name: edit visa form stage 7
   type: http
-  seq: 10
+  seq: 7
 
 http:
   method: PATCH
@@ -10,11 +10,11 @@ http:
     type: json
     data: |
       {
-        "stage": 5,
+        "stage": 7,
         "data": {
-          "inProgressStatus": "In Progress",
-          "pendingRequestFromVfsEmbassy": "None. Application under embassy review.",
-          "remarks": "Processing normally at UK Visas and Immigration"
+          "rejectionDate": "2026-11-15",
+          "rejectionReason": "Refusal under paragraph V 4.2 - insufficient funds",
+          "remarks": "Refusal letter provided to client"
         }
       }
   auth: inherit
