@@ -18,11 +18,11 @@ http:
           "items": [
             {
               "name": "Roundtrip Flight Tickets (2 Adults)",
-              "amount": 80000
+              "amount": 10000
             },
             {
               "name": "4-Star Hotel Accommodation (6 Nights)",
-              "amount": 100000
+              "amount": 1900000
             },
             {
               "name": "Transfers & Guided Excursions",

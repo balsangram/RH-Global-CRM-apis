@@ -1,0 +1,35 @@
+info:
+  name: display  lead copy
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: "{{baseUrl}}/lead/stage"
+  params:
+    - name: type
+      value: visa
+      type: query
+      disabled: true
+    - name: type
+      value: holiday
+      type: query
+      disabled: true
+    - name: q
+      value: sang
+      type: query
+      disabled: true
+    - name: q
+      value: sana@gmail.com
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
