@@ -1,7 +1,7 @@
 info:
   name: create application for company
   type: http
-  seq: 9
+  seq: 11
 
 http:
   method: POST
@@ -10,10 +10,20 @@ http:
     type: json
     data: |
       {
-        "packageId": "672462378943719912000001",
-        "companyId": "672462378943719912000003"
+        "customerType": "individual",
+        "travelerId": "6ae44b017ca59975b18930f5",
+        "companyId":"",
+        "packageId": "6ae182cd6bdd07c24109c20b",
+        "applicantName": "John Doe",
+        "email": "johndoe@example.com",
+        "mobileNumber": "+919876543210",
+        "targetCountry": "United Kingdom",
+        "visaType": "Tourist Visa",
+        "caseOfficer": ""
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

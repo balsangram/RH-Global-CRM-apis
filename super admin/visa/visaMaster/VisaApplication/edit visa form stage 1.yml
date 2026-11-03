@@ -5,7 +5,7 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/visa-master/6ae43a34b65146dd6c981f06"
+  url: "{{baseUrl}}/application/6ae886568c0cdadd2c05a2fc/stage"
   body:
     type: json
     data: |
@@ -26,7 +26,9 @@ http:
           "remarks": "All mandatory documents received"
         }
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{admintoken}}"
 
 settings:
   encodeUrl: true
