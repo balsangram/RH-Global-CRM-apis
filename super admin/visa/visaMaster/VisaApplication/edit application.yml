@@ -5,15 +5,15 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/application/6ae4843e4e337c9fd4ca9ffa"
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d"
   body:
-    type: json
-    data: |
-      {
-        "applicantName": "Priya Sharma",
-        "mobileNumber": "+919876543211",
-        "status": "Received"
-      }
+    type: multipart-form
+    data:
+      - name: companyDocument
+        type: file
+        value:
+          - /home/lucky/Pictures/face1.jpg
+        contentType: image/jpeg
   auth:
     type: bearer
     token: "{{adminToken}}"

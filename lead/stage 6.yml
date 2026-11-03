@@ -1,0 +1,27 @@
+info:
+  name: stage 6
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/lead/6ae9c440573740f135dacf72/stage"
+  body:
+    type: json
+    data: |-
+      {
+        "stage": 6,
+        "data": {
+          "remarks": "Scheduled follow-up for next holiday season"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

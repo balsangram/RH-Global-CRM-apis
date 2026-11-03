@@ -5,21 +5,21 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/visa-master/6ae4843e4e337c9fd4ca9ffa"
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d/stage"
   body:
     type: json
-    data: |
+    data: |-
       {
         "stage": 2,
         "data": {
-          "appointmentDate": "2026-11-15T09:30:00.000Z",
-          "appointmentTime": "09:30 AM",
-          "appointmentLocation": "VFS Delhi",
-          "vfsEmbassyCharges": 5500,
-          "remarks": "Appointment booked successfully"
+          "location": "VFS Global Delhi",
+          "handledBy": "RHG Staff", // "RHG Staff" | "Vendor" | "Applicant"
+          "remarks": "Appointment booked for 20th Nov 10:30 AM"
         }
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

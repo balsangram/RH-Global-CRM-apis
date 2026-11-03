@@ -5,19 +5,20 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/visa-master/6ae43a34b65146dd6c981f06"
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d/stage"
   body:
     type: json
-    data: |
+    data: |-
       {
         "stage": 3,
         "data": {
-          "verificationStatus": "Ready for Submission",
-          "verificationDate": "2026-11-03",
-          "remarks": "All documents verified and dossier prepared"
+          "verificationStatus": "Ready for Submission", // "Pending" | "Ready for Submission"
+          "remarks": "All documents verified and attested"
         }
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

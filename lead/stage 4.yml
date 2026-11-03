@@ -1,0 +1,29 @@
+info:
+  name: stage 4
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/lead/6ae9c440573740f135dacf72/stage"
+  body:
+    type: json
+    data: |-
+      {
+        "stage": 4,
+        "data": {
+          "offeredDiscount": 10000,
+          "revisedAmount": 230000,
+          "remarks": "Customer satisfied with revised pricing"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

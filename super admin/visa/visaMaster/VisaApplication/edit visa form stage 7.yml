@@ -5,19 +5,20 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/visa-master/6ae43a34b65146dd6c981f06"
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d/stage"
   body:
     type: json
-    data: |
+    data: |-
       {
         "stage": 7,
         "data": {
-          "rejectionDate": "2026-11-15",
-          "rejectionReason": "Refusal under paragraph V 4.2 - insufficient funds",
-          "remarks": "Refusal letter provided to client"
+          "rejectionReason": "Insufficient financial proof submitted",
+          "remarks": "Traveler notified. Can appeal in 30 days."
         }
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

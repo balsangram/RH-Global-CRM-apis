@@ -5,30 +5,26 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/application/6ae886568c0cdadd2c05a2fc/stage"
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d/stage"
   body:
     type: json
-    data: |
+    data: |-
       {
         "stage": 1,
         "data": {
-          "docsReceivedMode": "Pickup",
+          "docsReceivedMode": "Courier", // "Courier" | "Pickup" | "Email"
           "generalChecklist": [
             {
-              "title": "Original Passport",
-              "status": "Received"
-            },
-            {
-              "title": "Bank Statements",
-              "status": "Received"
+              "checklistId": "6724a1b2c3d4e5f60718293e",
+              "status": true
             }
           ],
-          "remarks": "All mandatory documents received"
+          "remarks": "All documents arrived"
         }
       }
   auth:
     type: bearer
-    token: "{{admintoken}}"
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

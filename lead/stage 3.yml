@@ -1,0 +1,43 @@
+info:
+  name: stage 3
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/lead/6ae9c440573740f135dacf72/stage"
+  body:
+    type: json
+    data: |-
+      {
+        "stage": 3,
+        "data": {
+          "proposedAmount": 240000,
+          "validUntil": "2026-11-20",
+          "remarks": "Proposal quote v1 sent to customer",
+          "items": [
+            {
+              "name": "Roundtrip Flight Tickets (2 Adults)",
+              "amount": 80000
+            },
+            {
+              "name": "4-Star Hotel Accommodation (6 Nights)",
+              "amount": 100000
+            },
+            {
+              "name": "Transfers & Guided Excursions",
+              "amount": 60000
+            }
+          ]
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

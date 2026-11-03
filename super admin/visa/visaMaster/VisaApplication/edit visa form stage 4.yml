@@ -5,22 +5,22 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/visa-master/6ae43a34b65146dd6c981f06"
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d/stage"
   body:
     type: json
-    data: |
+    data: |-
       {
         "stage": 4,
         "data": {
-          "submission": "VFS",
-          "submissionDate": "2026-11-05",
-          "vfsEmbassyReferenceNo": "GWF012345678",
-          "collectionMode": "Counter Collection",
-          "submissionLocation": "VFS Delhi",
-          "remarks": "Biometrics and application submitted successfully"
+          "submission": "VFS", // "VFS" | "Embassy" | "VFS/Embassy"
+          "vfsEmbassyReferenceNo": "REF-VFS-987654",
+          "collectionMode": "Direct Applicant",
+          "remarks": "Biometrics and submission complete"
         }
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

@@ -5,27 +5,37 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/visa-master/6ae43a34b65146dd6c981f06"
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d/stage"
   body:
-    type: json
-    data: |
-      {
-        "stage": 6,
-        "data": {
-          "finalStatus": "Approved",
-          "completionDate": "2026-11-15",
-          "modeOfDispatch": "Courier",
-          "dispatchDate": "2026-11-16",
-          "trackingNumber": "DTDC987654321",
-          "dispatch": [
-            {
-              "title": "Passport with Stamped Visa",
-              "status": "Dispatched"
-            }
-          ],
-          "remarks": "Visa approved for 6 months. Passport dispatched."
-        }
-      }
+    type: multipart-form
+    data:
+      - name: stage
+        type: text
+        value: "6"
+      - name: finalStatus
+        type: text
+        value: Approved
+      - name: modeOfDispatch
+        type: text
+        value: Pickup
+      - name: dispatch[0]
+        type: text
+        value: |-
+          {
+                  "checklistId": "6ae02d688404af4a972190e5",
+                  "status": true
+                }
+      - name: uploadFinalDocument
+        type: file
+        value:
+          - /home/lucky/Pictures/_ (10).jpeg
+        contentType: image/jpeg
+      - name: remarks
+        type: text
+        value: Any string
+      - name: trackingNumber
+        type: text
+        value: Tracking number string
   auth: inherit
 
 settings:

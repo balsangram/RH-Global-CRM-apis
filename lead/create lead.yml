@@ -32,7 +32,10 @@ http:
         "howCanWeAssist": "Need full package with resort, conference hall, and catering",
         "customerType":"",
         "companyId":"",
-        "travelerId":""
+        "travelerId":"",
+        "city":"",
+        "address":"",
+        "pinCode":""
       }
 
 settings:
