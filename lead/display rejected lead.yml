@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/lead/rejected/stage"
+  url: "{{baseUrl}}/lead/rejected"
   params:
     - name: type
       value: visa

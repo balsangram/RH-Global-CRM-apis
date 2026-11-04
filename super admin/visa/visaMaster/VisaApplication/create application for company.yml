@@ -19,7 +19,8 @@ http:
         "mobileNumber": "+919876543210",
         "targetCountry": "United Kingdom",
         "visaType": "Tourist Visa",
-        "caseOfficer": ""
+        "caseOfficer": "",
+        "paymentType":"prepaid"  // "prepaid" | "postpaid" (default: "postpaid")
       }
   auth:
     type: bearer

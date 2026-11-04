@@ -5,8 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/company"
-  auth: inherit
+  url: "{{baseUrl}}/company?q=balsangram@gmail.com"
+  params:
+    - name: q
+      value: balsangram@gmail.com
+      type: query
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

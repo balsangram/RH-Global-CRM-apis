@@ -35,7 +35,8 @@ http:
         "travelerId":"",
         "city":"",
         "address":"",
-        "pinCode":""
+        "pinCode":"",
+        "inquirySource":""
       }
 
 settings:

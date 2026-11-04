@@ -36,7 +36,9 @@ http:
       - name: trackingNumber
         type: text
         value: Tracking number string
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

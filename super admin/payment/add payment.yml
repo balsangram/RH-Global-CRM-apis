@@ -1,0 +1,32 @@
+info:
+  name: add payment
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/payments"
+  body:
+    type: json
+    data: |-
+      {
+        "applicationType": "visa", // "visa" | "booking"
+        "visaApplication": "6ae182cd6bdd07c24109c20b",
+        "paymentType": "prepaid", // "prepaid" | "postpaid"
+        "paymentMode": "upi", // "cash" | "card" | "upi" | "bank_transfer" | "online" | "other"
+        "amount": 15000,
+        "referenceTxnId": "UPI/2026/9876543210",
+        "status": "success", // "pending" | "success"
+        "paymentDate": "2026-11-04T10:30:00.000Z",
+        "remarks": "Advance payment for France Tourist Visa"
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

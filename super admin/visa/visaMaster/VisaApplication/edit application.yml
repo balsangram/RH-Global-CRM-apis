@@ -14,6 +14,9 @@ http:
         value:
           - /home/lucky/Pictures/face1.jpg
         contentType: image/jpeg
+      - name: paymentType
+        type: text
+        value: postpaid
   auth:
     type: bearer
     token: "{{adminToken}}"

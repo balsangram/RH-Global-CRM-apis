@@ -1,0 +1,26 @@
+info:
+  name: "edit payment "
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/payments/6aeace9cfce70344bf407fe1"
+  body:
+    type: json
+    data: |-
+      {
+        "status": "success",
+        "referenceTxnId": "IMPS/2026/88771122",
+        "remarks": "Bank transfer verified and cleared"
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

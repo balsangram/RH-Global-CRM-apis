@@ -1,0 +1,21 @@
+info:
+  name: delete payment
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/payments/6aeace9cfce70344bf407fe1"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
