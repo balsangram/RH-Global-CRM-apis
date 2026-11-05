@@ -1,7 +1,7 @@
 info:
   name: 8. Assign / Reassign Staff
   type: http
-  seq: 15
+  seq: 13
 
 http:
   method: PATCH

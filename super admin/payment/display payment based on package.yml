@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/payments/package"
+  url: "{{baseUrl}}/payments/package/6ae182cd6bdd07c24109c20b"
   auth:
     type: bearer
     token: "{{adminToken}}"

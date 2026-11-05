@@ -1,0 +1,36 @@
+info:
+  name: 4. Create Holiday Form (Stage 1 / Initial Lead)
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}/holiday-master"
+  body:
+    type: json
+    data: |-
+      {
+        "customerName": "Rahul Sharma",
+        "phone": "9876543210",
+        "email": "rahul.sharma@gmail.com",
+        "destination": "Switzerland",
+        "packageId": "6ae1c603b7c9bd582f1bbc8a",
+        "travelStartDate": "2026-12-15",
+        "travelEndDate": "2026-12-22",
+        "numberOfAdults": 2,
+        "numberOfChildren": 1,
+        "budget": 150000,
+        "currency": "INR",
+        "customerType": "individual",
+        "paymentType": "postpaid"
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

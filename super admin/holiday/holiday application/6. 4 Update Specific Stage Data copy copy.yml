@@ -1,0 +1,31 @@
+info:
+  name: 6. 4 Update Specific Stage Data copy copy
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6aeaf3f0935a6901c8bcb0a9/stage"
+  body:
+    type: json
+    data: |-
+      {
+        "stage": 4,
+        "currentStage": 4,
+        "data": {
+          "arrivalConfirmedAndAirportPickupVerified": true,
+          "midTourSatisfactionCheckInCompleted": true,
+          "anyOnGroundItineraryAdjustmentsAccommodated": true,
+          "remarks": "Airport transfer smooth, guest checked into resort, day 3 check-in positive"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

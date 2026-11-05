@@ -1,0 +1,31 @@
+info:
+  name: 6. 1 Update Specific Stage Data
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6aeaf319935a6901c8bcb0a8/stage"
+  body:
+    type: json
+    data: |-
+      {
+        "stage": 1,
+        "currentStage": 1,
+        "data": {
+          "travelDatesAndPaxCountVerified": true,
+          "primaryContactAndEmergencyDetailsConfirmed": true,
+          "roomCategoryAndDietaryPreferencesNoted": true,
+          "remarks": "PAX count confirmed for 4 adults; dietary preferences vegetarian"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

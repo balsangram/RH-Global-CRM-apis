@@ -1,7 +1,7 @@
 info:
   name: 7. Advance / Transition Stage
   type: http
-  seq: 14
+  seq: 12
 
 http:
   method: PATCH

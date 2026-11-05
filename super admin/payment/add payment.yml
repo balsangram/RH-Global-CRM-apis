@@ -11,11 +11,11 @@ http:
     data: |-
       {
         "applicationType": "visa", // "visa" | "booking"
-        "visaApplication": "6ae182cd6bdd07c24109c20b",
+        "visaApplication": "6ae97f337e36e23d3e34134d",
         "paymentType": "prepaid", // "prepaid" | "postpaid"
         "paymentMode": "upi", // "cash" | "card" | "upi" | "bank_transfer" | "online" | "other"
         "amount": 15000,
-        "referenceTxnId": "UPI/2026/9876543210",
+        "referenceTxnId": "UPI/2026/9876543211",
         "status": "success", // "pending" | "success"
         "paymentDate": "2026-11-04T10:30:00.000Z",
         "remarks": "Advance payment for France Tourist Visa"

@@ -6,7 +6,11 @@ info:
 http:
   method: GET
   url: "{{baseUrl}}/visa/countries/all"
-  auth: inherit
+  auth:
+    type: bearer
+    token: |-
+      {{ad
+      {{adminToken}}
 
 settings:
   encodeUrl: true

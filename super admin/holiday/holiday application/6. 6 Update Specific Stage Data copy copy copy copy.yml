@@ -1,0 +1,30 @@
+info:
+  name: 6. 6 Update Specific Stage Data copy copy copy copy
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6aeaf3f0935a6901c8bcb0a9/stage"
+  body:
+    type: json
+    data: |-
+      {
+        "stage": 6,
+        "currentStage": 6,
+        "status": "Rejected",
+        "data": {
+          "rejectionReason": "Client cancelled trip due to personal scheduling conflict",
+          "remarks": "Refund requested and processed according to package policy"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

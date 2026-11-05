@@ -10,7 +10,9 @@ http:
     - name: isActive
       value: "false"
       type: query
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

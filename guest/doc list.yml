@@ -1,0 +1,16 @@
+info:
+  name: doc list
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{baseUrl}}/guest/companies/6ae9d38455ef8091c920b628/employees"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

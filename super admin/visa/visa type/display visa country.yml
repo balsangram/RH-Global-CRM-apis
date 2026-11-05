@@ -5,8 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/visa/6ad0bcff6960dd43c4e50a75"
-  auth: inherit
+  url: "{{baseUrl}}/visa/6adf240d5aefe8845217feea"
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
 
 settings:
   encodeUrl: true

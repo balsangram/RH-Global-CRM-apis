@@ -1,0 +1,32 @@
+info:
+  name: 6. 3 Update Specific Stage Data copy
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/holiday-master/6aeaf3f0935a6901c8bcb0a9/stage"
+  body:
+    type: json
+    data: |-
+      {
+        "stage": 3,
+        "currentStage": 3,
+        "data": {
+          "flightETicketsAndSeatAllocationsFinalized": true,
+          "hotelVoucherAndCheckInConfirmationGenerated": true,
+          "localTourGuideAndAirportTransferDetailsShared": true,
+          "preDepartureBriefingCallConductedWithTraveler": true,
+          "remarks": "Flight e-tickets, hotel vouchers, and briefing completed with traveler"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
