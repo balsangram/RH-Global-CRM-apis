@@ -8,14 +8,20 @@ http:
   url: "{{baseUrl}}/reminders"
   body:
     type: json
-    data: |
+    data: |-
       {
-        "date": "2026-10-29",
-        "message": "Call customer regarding Dubai visa photo submission",
-        "title": "Visa Photo Follow-up",
+        "date": "2026-11-20T10:00:00.000Z",
+        "remark": "Follow up on pending document verification and payment receipts",
+        "staffId": "6729dc7a1e0b5f1234567890",
         "priority": "High",
-        "status": "Pending",
-        "staffId": "66fa9d8324e9301138801234"
+        "visaApplications": [
+          "672a9b2c3d4e5f6789012345",
+          "672a9b2c3d4e5f6789012346"
+        ],
+        "bookingApplications": [
+          "672af56c123456789abcdef0",
+          "672af56c123456789abcdef1"
+        ]
       }
   auth: inherit
 

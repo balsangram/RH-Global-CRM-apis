@@ -1,0 +1,36 @@
+info:
+  name: edit  Employee Assignment leades copy
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/employee-assignments/6af2dd5451308bd3604c173e"
+  headers:
+    - name: Authorization
+      value: Bearer {{adminToken}}
+  body:
+    type: json
+    data: |-
+      // {
+      //   "purpose":"finance", //"full", "finance", "stage", "lead"
+      //   "priority":"low",  //"low", "medium", "high", "urgent"
+      //   "remarks":"do it",
+      //   "status":"in_progress"  //"active", "in_progress", "completed", "pending", "revoked", "cancelled"
+      // }
+
+
+
+      {
+        "status": "in_progress",
+        "priority": "high",
+        "remarks": "Document verification in progress"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

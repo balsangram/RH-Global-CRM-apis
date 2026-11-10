@@ -1,0 +1,19 @@
+info:
+  name: remove assign   Employee Assignment leades copy
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/employee-assignments/6af2eb4be8c8e9fbe5e36658/staff/6ae8896c4338e4b5ccab49df"
+  headers:
+    - name: Authorization
+      value: Bearer {{adminToken}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

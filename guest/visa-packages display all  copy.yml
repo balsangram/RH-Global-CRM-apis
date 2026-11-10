@@ -1,0 +1,16 @@
+info:
+  name: visa-packages display all  copy
+  type: http
+  seq: 14
+
+http:
+  method: GET
+  url: "{{baseUrl}}/guest/visa-country/6ae078b0e6f62f4d647bcb65"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

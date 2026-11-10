@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/guest/companies"
+  url: "{{baseUrl}}/guest/companies?search=Acm"
+  params:
+    - name: search
+      value: Acm
+      type: query
   auth: inherit
 
 settings:

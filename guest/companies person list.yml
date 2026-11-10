@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/guest/companies/6ae9d38455ef8091c920b628/employees"
+  url: "{{baseUrl}}/guest/companies/6adf4768788926c6f1da9ed5/employees?search=ss"
+  params:
+    - name: search
+      value: ss
+      type: query
   auth: inherit
 
 settings:

@@ -1,0 +1,32 @@
+info:
+  name: Create Employee Assignment visa
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/employee-assignments"
+  headers:
+    - name: Authorization
+      value: Bearer {{adminToken}}
+  body:
+    type: json
+    data: |-
+      {
+        "employeeId": "6adf20ff3725af54b947f231",
+        "visaApplication": "6ae4843e4e337c9fd4ca9ffa",
+        "purpose": "stage",
+        "assignedAt": "2026-11-10T10:00:00.000Z",
+        "startDate": "2026-11-10T10:00:00.000Z",
+        "dueDate": "2026-11-15T18:00:00.000Z",
+        "priority": "high",
+        "remarks": "Handle all visa stages for applicant"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -6,12 +6,15 @@ info:
 http:
   method: POST
   url: "{{baseUrl}}/visa"
+  headers:
+    - name: Authorization
+      value: Bearer {{adminToken}}
   body:
     type: multipart-form
     data:
       - name: country
         type: text
-        value: 6adf22773725af54b947f232
+        value: 6aec568846af1036dbacf0cd
       - name: packageName
         type: text
         value: Canada Student Direct Stream (SDS) Visa
@@ -21,17 +24,18 @@ http:
       - name: image
         type: file
         value:
-          - /home/lucky/Downloads/insia.webp
-        contentType: image/webp
-        disabled: true
+          - /home/lucky/Downloads/david-edelstein-N4DbvTUDikw-unsplash.jpg
+        contentType: image/jpeg
       - name: sideImages[0]
-        type: text
-        value: Study, visit, and work permits for Canada
-        disabled: true
+        type: file
+        value:
+          - /home/lucky/Downloads/mana5280-ivG8LkDrtjs-unsplash.jpg
+        contentType: image/jpeg
       - name: sideImages[1]
-        type: text
-        value: ""
-        disabled: true
+        type: file
+        value:
+          - /home/lucky/Downloads/global-residence-index-Cg3fyYZMQ58-unsplash.jpg
+        contentType: image/jpeg
       - name: validityPeriod
         type: text
         value: Up to 3 Years

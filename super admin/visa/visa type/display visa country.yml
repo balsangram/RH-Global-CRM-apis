@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/visa/6adf240d5aefe8845217feea"
+  url: "{{baseUrl}}/visa/6aead526bac6b43ecb30c7ed"
   auth:
     type: bearer
     token: "{{adminToken}}"

@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/holiday-master/6aeaf3f0935a6901c8bcb0a9"
+  url: "{{baseUrl}}/holiday-master/6aeade91c25f64d4b2ecd289"
   auth:
     type: bearer
     token: "{{adminToken}}"

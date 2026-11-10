@@ -6,6 +6,9 @@ info:
 http:
   method: GET
   url: "{{baseUrl}}/holiday"
+  headers:
+    - name: Authorization
+      value: Bearer {{adminToken}}
   auth: inherit
 
 settings:

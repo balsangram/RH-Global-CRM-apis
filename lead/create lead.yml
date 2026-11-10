@@ -10,7 +10,7 @@ http:
     type: json
     data: |
       {
-        "firstName": "Sangram",
+        "firstName": "Sangram1",
         "lastName": "Bal",
         "phone": "6370404471",
         "email": "balsangram@gmail.com",
@@ -20,7 +20,7 @@ http:
       //   "noOfEmployees": 120,
       //   "spocPerson": "Amit Verma",
       //   "designation": "HR Director",
-        "type": "visa",
+      //   "type": "visa",
         "travelType": "domestic",
         "travelToCountry": "India",
         "howManyPeople": 45,

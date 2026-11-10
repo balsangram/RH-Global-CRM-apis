@@ -6,12 +6,15 @@ info:
 http:
   method: POST
   url: "{{baseUrl}}/holiday"
+  headers:
+    - name: Authorization
+      value: Bearer {{adminToken}}
   body:
     type: multipart-form
     data:
       - name: packageName
         type: text
-        value: Bali Wonders with Return Flights
+        value: test
       - name: destination
         type: text
         value: Bali
@@ -36,18 +39,20 @@ http:
       - name: coverImage
         type: file
         value:
-          - /home/lucky/Downloads/Golden Hour Skatepark Ollie.png
-        contentType: image/png
+          - /home/lucky/Downloads/pexels-asadphoto-3601422.jpg
+        contentType: image/jpeg
       - name: images[0]
         type: file
         value:
           - /home/lucky/Pictures/_ (10).jpeg
-        contentType: image/jpeg
+          - /home/lucky/Downloads/pexels-asadphoto-28843931.jpg
+        contentType: multipart/mixed
       - name: images[1]
         type: file
         value:
           - /home/lucky/Pictures/_ (10).jpeg
-        contentType: image/jpeg
+          - /home/lucky/Downloads/pexels-asadphoto-9149357.jpg
+        contentType: multipart/mixed
       - name: tripOverview
         type: text
         value: Experience the best of Bali with private tours, luxury stays in Kuta, thrilling water sports, and sunset temple visits.
@@ -133,6 +138,16 @@ http:
       - name: countries[0]
         type: text
         value: india
+      - name: images[2]
+        type: file
+        value:
+          - /home/lucky/Downloads/pexels-falcon-12374914.jpg
+        contentType: image/jpeg
+      - name: images[3]
+        type: file
+        value:
+          - /home/lucky/Downloads/pexels-jay-baid-1420324-15844517.jpg
+        contentType: image/jpeg
   auth: inherit
 
 settings:

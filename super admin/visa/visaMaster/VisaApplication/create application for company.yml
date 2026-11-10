@@ -10,17 +10,17 @@ http:
     type: json
     data: |
       {
-        "customerType": "individual",
-        "travelerId": "6ae44b017ca59975b18930f5",
-        "companyId":"",
+      //   "customerType": "individual",   
+         "customerType": "company",   
+      //   "travelerId": "",
+        "companyId":"6adf4768788926c6f1da9ed5",
         "packageId": "6ae182cd6bdd07c24109c20b",
-        "applicantName": "John Doe",
-        "email": "johndoe@example.com",
+        "applicantName": "Lucky Sing",
+        "email": "ssraj@example.com",
         "mobileNumber": "+919876543210",
-        "targetCountry": "United Kingdom",
-        "visaType": "Tourist Visa",
         "caseOfficer": "",
-        "paymentType":"prepaid"  // "prepaid" | "postpaid" (default: "postpaid")
+        "paymentType":"prepaid" , // "prepaid" | "postpaid" (default: "postpaid")
+        "totalAmount": 3000
       }
   auth:
     type: bearer

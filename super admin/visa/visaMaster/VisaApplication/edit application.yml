@@ -17,6 +17,9 @@ http:
       - name: paymentType
         type: text
         value: postpaid
+      - name: totalAmount
+        type: text
+        value: "400"
   auth:
     type: bearer
     token: "{{adminToken}}"

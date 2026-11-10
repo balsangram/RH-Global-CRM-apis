@@ -5,25 +5,21 @@ info:
 
 http:
   method: PATCH
-  url: "{{baseUrl}}/holiday-master/6ae2dfb1464ad1bdbb435e3f"
+  url: "{{baseUrl}}/holiday-master/6aeade91c25f64d4b2ecd289"
+  headers:
+    - name: Authorization
+      value: Bearer {{adminToken}}
   body:
     type: json
     data: |
       {
-        "status": "Active",
-        "discussion": {
-          "discussionDate": "2026-11-01",
-          "travelDestination": "Zurich & Interlaken",
-          "numberOfDays": 10,
-          "numberOfNights": 9,
-          "hotelPreference": "4 Star",
-          "quotationAmount": 340000,
-          "customerApprovalStatus": "Approved"
-        }
+      "travelStartDate":"2026-12-15",
+        "travelEndDate":"2026-12-25",
+        "totalMembers":"8",
+        "totalAmount":"6000",
+        "caseOfficer":"6adf20ff3725af54b947f231",
+        "paymentType":"postpaid"  //["prepaid", "postpaid"],
       }
-  auth:
-    type: bearer
-    token: ""
 
 settings:
   encodeUrl: true

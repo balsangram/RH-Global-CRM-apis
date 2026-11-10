@@ -8,21 +8,20 @@ http:
   url: "{{baseUrl}}/holiday-master"
   body:
     type: json
-    data: |-
+    data: |
       {
         "customerName": "Rahul Sharma",
         "phone": "9876543210",
-        "email": "rahul.sharma@gmail.com",
-        "destination": "Switzerland",
+        "email": "rahul.sharma123@gmail.com",
         "packageId": "6ae1c603b7c9bd582f1bbc8a",
         "travelStartDate": "2026-12-15",
         "travelEndDate": "2026-12-22",
-        "numberOfAdults": 2,
-        "numberOfChildren": 1,
-        "budget": 150000,
-        "currency": "INR",
-        "customerType": "individual",
-        "paymentType": "postpaid"
+        "totalMembers": 3,
+        "totalAmount": 150000,
+        "customerType": "company",
+        "paymentType": "postpaid",
+        "companyId":"6adf4768788926c6f1da9ed5",
+      "travelerId":""
       }
   auth:
     type: bearer
