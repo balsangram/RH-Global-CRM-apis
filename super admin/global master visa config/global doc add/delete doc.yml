@@ -1,0 +1,19 @@
+info:
+  name: delete doc
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/form/doc/6aeabe132731f47d0b7e75c9"
+  headers:
+    - name: Authorization
+      value: Bearer {{accestocken}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

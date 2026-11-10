@@ -1,0 +1,33 @@
+info:
+  name: create application for company
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{baseUrl}}/application"
+  body:
+    type: json
+    data: |
+      {
+        "customerType": "individual",
+        "travelerId": "6ae44b017ca59975b18930f5",
+        "companyId":"",
+        "packageId": "6ae182cd6bdd07c24109c20b",
+        "applicantName": "John Doe",
+        "email": "johndoe@example.com",
+        "mobileNumber": "+919876543210",
+        "targetCountry": "United Kingdom",
+        "visaType": "Tourist Visa",
+        "caseOfficer": ""
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

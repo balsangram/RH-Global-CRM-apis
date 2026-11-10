@@ -1,0 +1,7 @@
+info:
+  name: "visaMaster create form for visa type  "
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

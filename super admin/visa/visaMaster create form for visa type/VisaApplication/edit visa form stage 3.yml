@@ -1,0 +1,28 @@
+info:
+  name: edit visa form stage 3
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d/stage"
+  body:
+    type: json
+    data: |-
+      {
+        "stage": 3,
+        "data": {
+          "verificationStatus": "Ready for Submission", // "Pending" | "Ready for Submission"
+          "remarks": "All documents verified and attested"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

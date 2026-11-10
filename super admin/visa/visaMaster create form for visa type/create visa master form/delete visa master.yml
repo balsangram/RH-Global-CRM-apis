@@ -1,0 +1,18 @@
+info:
+  name: delete visa master
+  type: http
+  seq: 2
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/visa-master/6aeac0322731f47d0b7e75d4"
+  headers:
+    - name: Authorization
+      value: Bearer {{accestocken}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

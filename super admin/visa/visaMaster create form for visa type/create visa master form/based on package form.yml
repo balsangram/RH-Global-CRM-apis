@@ -1,0 +1,18 @@
+info:
+  name: based on package form
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{baseUrl}}/visa-master/package/6ae2c9c95464a6a1991ab919"
+  headers:
+    - name: Authorization
+      value: Bearer {{accestocken}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

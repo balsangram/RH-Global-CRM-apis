@@ -1,0 +1,30 @@
+info:
+  name: create visa form single
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/visa-master"
+  headers:
+    - name: Authorization
+      value: Bearer {{accestocken}}
+  body:
+    type: json
+    data: |
+      {
+        "packageId": "6ae2c9c95464a6a1991ab919",
+        "documents": [
+          "6ae46c3ab32ae008f3c35c22"
+        ],
+        "checklists": [
+          "6aeabcf12731f47d0b7e75c8"
+        ]
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

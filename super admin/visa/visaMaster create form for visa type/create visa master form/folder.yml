@@ -1,0 +1,7 @@
+info:
+  name: create visa master form
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

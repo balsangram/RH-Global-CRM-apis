@@ -1,0 +1,25 @@
+info:
+  name: add checklist
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseUrl}}/form/checklist"
+  headers:
+    - name: Authorization
+      value: Bearer {{accestocken}}
+  body:
+    type: json
+    data: |-
+      {
+        "title":"get the aadhar"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

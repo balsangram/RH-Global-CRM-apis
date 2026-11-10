@@ -1,0 +1,18 @@
+info:
+  name: delete application
+  type: http
+  seq: 13
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/application/6ae4830b4e337c9fd4ca9ff9"
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

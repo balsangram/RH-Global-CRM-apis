@@ -1,0 +1,25 @@
+info:
+  name: edit doc
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/form/doc/6ae46c3ab32ae008f3c35c22"
+  headers:
+    - name: Authorization
+      value: Bearer {{accestocken}}
+  body:
+    type: json
+    data: |-
+      {
+        "documentName":"Upload Visa Copy"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

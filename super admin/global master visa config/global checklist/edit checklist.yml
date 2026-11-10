@@ -1,0 +1,25 @@
+info:
+  name: edit checklist
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/form/checklist/6aeabb722731f47d0b7e75c6"
+  headers:
+    - name: Authorization
+      value: Bearer {{accestocken}}
+  body:
+    type: json
+    data: |-
+      {
+        "title":"the aadhar"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

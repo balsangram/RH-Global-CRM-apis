@@ -1,0 +1,34 @@
+info:
+  name: edit visa form stage 1
+  type: http
+  seq: 1
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d/stage"
+  body:
+    type: json
+    data: |-
+      {
+        "stage": 1,
+        "data": {
+          "docsReceivedMode": "Courier", // "Courier" | "Pickup" | "Email"
+          "generalChecklist": [
+            {
+              "checklistId": "6724a1b2c3d4e5f60718293e",
+              "status": true
+            }
+          ],
+          "remarks": "All documents arrived"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

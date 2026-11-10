@@ -1,0 +1,16 @@
+info:
+  name: diaplay holiday packages copy
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{baseUrl}}/holiday/6ae2f9aa17802285d54c09ff"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,18 @@
+info:
+  name: display application id
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d"
+  headers:
+    - name: Authorization
+      value: Bearer {{accestocken}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

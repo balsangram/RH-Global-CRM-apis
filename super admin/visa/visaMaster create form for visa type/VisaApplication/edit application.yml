@@ -1,0 +1,26 @@
+info:
+  name: "edit application "
+  type: http
+  seq: 12
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/application/6ae97f337e36e23d3e34134d"
+  body:
+    type: multipart-form
+    data:
+      - name: companyDocument
+        type: file
+        value:
+          - /home/lucky/Pictures/face1.jpg
+        contentType: image/jpeg
+  auth:
+    type: bearer
+    token: "{{adminToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
